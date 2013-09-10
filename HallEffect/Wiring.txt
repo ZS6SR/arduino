@@ -1,0 +1,9 @@
+Looking at the front of the board ...
+
+left pin = -ve = Gnd
+Middle   = 5v
+Right (S) = signal.
+
+Add a 220ohm resister between signal and 5v
+
+   

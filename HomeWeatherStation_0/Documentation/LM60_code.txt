@@ -1,0 +1,44 @@
+/* Home Weather Station */
+
+void setup()
+{
+  Serial.begin(9600);
+}
+
+void loop() 
+{  
+  float temp0 = getTemp(getVolts(A5));
+  Serial.print("Temp: "); 
+  Serial.print(temp0);
+  Serial.println();
+  delay(5000);
+}
+
+float getVolts(int pinIn)
+{
+  int inputValue = 0;
+  int bigT = 0, smallT = 0;
+
+  for (int i = 0; i < 20; i++)
+  {
+    inputValue = analogRead(pinIn);
+    bigT += inputValue;
+    delay(1);
+  }
+
+  smallT = bigT / 20;
+
+  float mV;
+  mV = ((float)(smallT) * 1030 / 1024);
+  mV = (mV - 0.5);
+  mV = mV * 5;
+
+  return mV;
+}
+
+
+float getTemp(float volts)
+{
+  float temp = (volts - 424) / 6.25;
+  return temp;
+}

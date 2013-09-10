@@ -1,0 +1,47 @@
+Leonardo
+
+5v  -> Breadboard +ve rail
+GND -> Breadboard -ve rail
+
+HD44780 (LCD)
+(http://www.stanford.edu/class/ee281/handouts/lcd_tutorial.pdf)
+(http://arduino.cc/en/Tutorial/LiquidCrystalDisplay)
+=============
+VSS -> GND
+VDD -> 5v rail on breadboard
+V0  -> Pot middle pin
+RS  -> 12
+RW  -> GND
+E   -> 11
+D4  -> 7
+D5  -> 6
+D6  -> 5
+D7  -> 4
+A   -> 220 Ohm resistor -> 5v
+K   -> GND
+
+Pot Pin1 -> 5v
+Pot Pin3 -> GND
+
+DHT22 (Temperature / Humidity)
+(http://www.adafruit.com/datasheets/DHT22.pdf)
+==============================
+Pin1 -> 10k resistor -> 5v
+Pin2 -> 8
+Pin4 -> GND
+
+LM60 (Temperature)
+(http://www.datasheetcatalog.org/datasheet/nationalsemiconductor/LM60.pdf)
+==================
+Pin1 -> 5v
+Pin2 -> A2
+Pin3 -> GND
+
+BMP085 (Temperature / Preassure)
+(http://learn.adafruit.com/bmp085)
+================================
+VCC -> 100Ohm Resistor -> GND
+    -> 47Ohm Resistor  -> 5v
+SDA -> SDA
+SCL -> SCL
+GND -> GND
